@@ -1,14 +1,14 @@
 /*-----------------------------------------------------------------------------------
 	Patrick Seguin's Art
 	About: A shiny new Blocs website.
-	Author: Patrick Seguin
+	Author: Norman Sheeran
 	Version: 1.0
 	Built with Blocs
 -----------------------------------------------------------------------------------*/
 body{
 	margin:0;
 	padding:0;
-    background:#FFFFFF;
+    background:var(--swatch-var-970);
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -52,8 +52,11 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 
 /* Sizes */
 
-.bloc-lg{
-	padding:100px 20px;
+.bloc-md{
+	padding:50px 20px;
+}
+.bloc-sm{
+	padding:20px;
 }
 
 
@@ -89,6 +92,16 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 /* = NavBar
 -------------------------------------------------------------- */
 
+/* = Sticky Nav
+-------------------------------------------------------------- */
+
+.sticky-nav.sticky{
+	position:fixed;
+	top:0;
+	z-index:1000;
+	box-shadow:0 1px 2px rgba(0,0,0,.3);
+	 transition: all .2s ease-out;
+}
 /* Navbar Icon */
 .svg-menu-icon{
 	fill: none;
@@ -164,6 +177,9 @@ button{
 	outline: none!important;
 }
 
+.btn-rd{
+	border-radius: 40px;
+}
 
 
 
@@ -203,6 +219,13 @@ button{
 }
 }
 
+/* = Forms
+-------------------------------------------------------------- */
+
+.form-control{
+	border-color:rgba(0,0,0,.1);
+	box-shadow:none;
+}
 
 
 
@@ -241,6 +264,182 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .container{
 	max-width:1140px;
 }
+.bento-box{
+	background-color:var(--swatch-var-3849);
+	width:100%;
+	position:relative;
+	padding:40px 40px 40px 40px;
+	border-radius:30px 30px 30px 30px;
+}
+.mini-heading{
+	font-size:20px;
+	font-weight:600;
+	text-transform:uppercase;
+}
+.box-info{
+	font-size:22px;
+}
+.section-heading{
+	font-size:40px;
+	font-weight:600;
+}
+.avatar{
+	width:150px;
+	border-radius:100px 100px 100px 100px;
+}
+.primary-gradient{
+	background:linear-gradient(335deg, var(--swatch-var-3726)  0%, var(--swatch-var-5341) 100%);
+}
+.brand{
+	font-weight:600;
+}
+.primary-text{
+	background-clip:text!important;
+	-webkit-background-clip:text!important;
+	background:linear-gradient(90deg, var(--swatch-var-5341) 0%, var(--swatch-var-3726) 100%);
+	color:transparent!important;
+	display:inline-block;
+}
+.box-heading{
+	font-size:36px;
+	font-weight:600;
+}
+.arrow-btn{
+	width:40px;
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	height:40px;
+	opacity:0.5;
+}
+.orange-gradient{
+	background:linear-gradient(168deg, #FA7A01 0%, #BA2E0A 100%);
+}
+.md-box-img{
+	max-width:100px;
+}
+.blue-gradient{
+	background:linear-gradient(309deg, #0CADF4 0%, #1970EC 100%);
+}
+.sm-box-img{
+	max-width:60px;
+}
+.alt-bottom-padding{
+	padding-bottom:25px;
+}
+.sm-box-heading{
+	font-size:18px;
+}
+.md-box-heading{
+	font-weight:600;
+}
+.sm-arrow{
+	max-width:30px;
+	bottom:15px;
+	right:20px;
+}
+.box-bg-1{
+	background-image:url("img/graphic-1.jpg");
+	background-image: -webkit-image-set(url("img/graphic-1.webp") 1x,
+url("img/graphic-1.webp") 2x);background-image: image-set(url("img/graphic-1.jpg") 1x,
+url("img/graphic-1.jpg") 2x,url("img/graphic-1.webp") 1x,
+url("img/graphic-1.webp") 2x);
+}
+.box-bg-3{
+	background-image:url("img/graphic-4.jpg");
+	background-image: -webkit-image-set(url("img/graphic-4.webp") 1x,
+url("img/graphic-4.webp") 2x);background-image: image-set(url("img/graphic-4.jpg") 1x,
+url("img/graphic-4.jpg") 2x,url("img/graphic-4.webp") 1x,
+url("img/graphic-4.webp") 2x);
+}
+.bg-img-box{
+	height:500px;
+	background-size:cover;
+}
+.box-bg-4{
+	background-image:url("img/graphic-3.jpg");
+	background-image: -webkit-image-set(url("img/graphic-3.webp") 1x,
+url("img/graphic-3.webp") 2x);background-image: image-set(url("img/graphic-3.jpg") 1x,
+url("img/graphic-3.jpg") 2x,url("img/graphic-3.webp") 1x,
+url("img/graphic-3.webp") 2x);
+}
+.box-bg-2{
+	background-image:url("img/graphic-2.jpg");
+	background-image: -webkit-image-set(url("img/graphic-2.webp") 1x,
+url("img/graphic-2.webp") 2x);background-image: image-set(url("img/graphic-2.jpg") 1x,
+url("img/graphic-2.jpg") 2x,url("img/graphic-2.webp") 1x,
+url("img/graphic-2.webp") 2x);
+}
+.gradient-heading{
+	background:linear-gradient(269deg, rgba(255,255,255,0.32) 0%, #FFFFFF 100%);
+	background-clip:text!important;
+	-webkit-background-clip:text!important;
+	color:transparent!important;
+	display:inline-block;
+}
+.token-link{
+	font-weight:400;
+	text-decoration:none;
+	font-size:18px;
+	background-color:rgba(0,0,0,0.03);
+	color:var(--swatch-var-2190)!important;
+	background-size:auto auto;
+	display:inline-block;
+	margin-right:10px;
+	padding:5px 20px 5px 20px;
+	border-radius:30px 30px 30px 30px;
+}
+.arrow-btn:hover{
+	opacity:1;
+}
+.token-link:hover{
+	background-color:var(--swatch-var-3726);
+	color:var(--swatch-var-3849)!important;
+	background:linear-gradient(314deg, var(--swatch-var-3726)  0%, var(--swatch-var-5341) 100%);
+}
+.navbar-nav li a{
+	font-size:18px;
+	font-weight:600;
+}
+.box-btn{
+	padding-left:30px;
+	padding-right:30px;
+	font-weight:600;
+	border-width:0px 0px 0px 0px;
+}
+.overlay-heading{
+	position:absolute;
+	z-index:100;
+	left:60px;
+	top:60px;
+}
+.primary-btn{
+	background:linear-gradient(335deg, var(--swatch-var-3726) 0%, var(--swatch-var-5341) 100%);
+}
+.primary-btn:hover{
+	background:linear-gradient(128deg, var(--swatch-var-3726)  0%, var(--swatch-var-5341) 100%);
+	color:var(--swatch-var-3849)!important;
+}
+.active-token{
+	background:linear-gradient(314deg, var(--swatch-var-3726)  0%, var(--swatch-var-5341) 100%);
+	color:var(--swatch-var-3849)!important;
+}
+.scrollToTop{
+	background:linear-gradient(335deg, var(--swatch-var-3726) 0%, var(--swatch-var-5341) 100%);
+	border-radius:8px 8px 8px 8px;
+	border-width:0px 0px 0px 0px;
+}
+.scrollToTop:hover{
+	background:linear-gradient(0deg, var(--swatch-var-3726) 0%, var(--swatch-var-5341) 100%);
+}
+.sticky.sticky-nav{
+	backdrop-filter:blur(30px);
+	-webkit-backdrop-filter:blur(30px);
+	background-color:rgba(255,255,255,0.30);
+}
+.link-style{
+	width:17.23%;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -248,11 +447,68 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 /* Swatch Variables */
 :root{
 	
+	--swatch-var-3849:rgba(255,255,255,1.00);
+	
+	--swatch-var-970:rgba(245,245,247,1.00);
+	
+	--swatch-var-2190:rgba(0,0,0,1.00);
+	
+	--swatch-var-6153:rgba(0,0,0,0.40);
+	
+	--swatch-var-3726:rgba(11,158,183,1.00);
+	
+	--swatch-var-5341:rgba(62,215,189,1.00);
+	
 }
 
 
+/* Background colour styles */
+
+.bgc-3849{
+	background-color:var(--swatch-var-3849);
+}
+
+/* Text colour styles */
+
+.tc-6153{
+	color:var(--swatch-var-6153)!important;
+}
+.tc-2190{
+	color:var(--swatch-var-2190)!important;
+}
+.tc-3849{
+	color:var(--swatch-var-3849)!important;
+}
+
+/* Link colour styles */
+
+.ltc-2190{
+	color:var(--swatch-var-2190)!important;
+}
+.ltc-2190:hover{
+	color:#000000!important;
+}
 
 
+/* = Custom Bric Data
+-------------------------------------------------------------- */
+
+.social-link-bric a svg{
+	transition: all 0.3s ease-in-out;
+}
+.social-hover-fade a:hover svg{
+	opacity: 0.5;
+}
+.social-hover-grow a:hover svg{
+	transform: scale(1.2);
+}
+.social-hover-shrink a:hover svg{
+	transform: scale(0.9);
+}
+.social-hover-shadow a:hover svg{
+	filter: drop-shadow(0px 6px 2px rgba(0,0,0,0.3));
+	overflow: visible;
+}
 
 
 /* = Bloc Padding Multi Breakpoint
@@ -333,3 +589,77 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	   height: 320px;
     }
 }
+
+@media (max-width: 991px){
+	.avatar{
+		width:120px;
+	}
+	.token-link{
+		margin-bottom:10px;
+	}
+	.bg-img-box{
+		height:350px;
+	}
+	.bento-box{
+		padding:30px 30px 30px 30px;
+	}
+	
+}
+
+@media (max-width: 767px){
+	.token-link{
+		font-size:16px;
+	}
+	.bento-box{
+		padding:30px 30px 30px 30px;
+	}
+	.box-heading{
+		font-size:30px;
+	}
+	.box-info{
+		font-size:20px;
+	}
+	.bg-img-box{
+		height:250px;
+	}
+	.overlay-heading{
+		top:50px;
+		left:50px;
+	}
+	
+}
+
+@media (max-width: 575px){
+	.token-link{
+		font-size:14px;
+		padding-right:15px;
+		padding-left:15px;
+	}
+	.bento-box{
+		padding:20px 20px 20px 20px;
+	}
+	.box-info{
+		font-size:18px;
+	}
+	.section-heading{
+		font-size:30px;
+	}
+	.bg-img-box{
+		height:300px;
+	}
+	.sm-arrow{
+		bottom:10px;
+		right:15px;
+	}
+	.overlay-heading{
+		left:30px;
+		top:30px;
+	}
+	.fill-mob-btn{
+		width:100%;
+	}
+	.primary-btn{
+	}
+	
+}
+
